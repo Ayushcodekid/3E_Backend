@@ -10,9 +10,11 @@ require('dotenv').config();
 const PORT = process.env.PORT || 9000;
 
 app.use(cors({
-  origin: 'https://3eapp-rbac.dwcx460bjugbd.amplifyapp.com/',
+  origin: '*',
   credentials: true, // If you need to allow cookies/auth headers
 }));
+
+app.options('*', cors());
 
 app.use(express.json());
 
