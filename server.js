@@ -10,7 +10,7 @@ require('dotenv').config();
 const PORT = process.env.PORT || 9000;
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://threee-backend.onrender.com/',
   credentials: true, // If you need to allow cookies/auth headers
 }));
 
