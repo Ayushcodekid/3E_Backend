@@ -55,7 +55,7 @@ const checkUserPlan = async (req, res) => {
     console.log(`Received userId: ${userId}`);
 
     // Find the user by cognitoUserId
-    const user = await User.findOne({ cognitoUserId: userId });
+    const user = await UserModel.findOne({ cognitoUserId: userId });
 
     if (!user) {
       console.log(`No user found with cognitoUserId: ${userId}`);
